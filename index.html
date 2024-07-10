@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatsapp UI</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+        @media screen and (min-width:50px) and (max-width:359px) {
+            .leftcont{
+    position:relative;
+    height:100vh;
+    background: #fff;
+    border-right: 1px solid grey;
+    
+}
+            .rightcont{
+                display: none;
+            }
+            .rchat{
+                margin: 15px;
+                position:relative;
+                /* height: calc(100%-195px); */
+                /* overflow-y: auto; */
+                background-color: #0a4263;
+                display: flex;
+                justify-content: start;
+                /* height:calc(100%-200ox);
+                overflow-y: scroll; */
+            }
+            .rscroll{
+                
+                overflow-y: scroll;
+                /* height:calc(90px); */
+                height: 150em;
+                
+                
+                /* background-color:  ; */
+                }
+            
+                .search{
+                position: relative;
+
+                width:100%;
+                
+                /* background: #f6f6f6; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+            }
+                .search div{
+                    width:100%;
+                    font-size: 80px;
+                    height: 250px;
+                }
+                .search div ion-icon[name="search" ]{
+                
+                position: absolute;
+                left:80%;
+                top:-10px;
+                } 
+            hr{
+                margin-left:138px;
+                font-weight: 100;
+            
+                opacity: 0.5;
+            }
+
+                .ssd{
+                    width:90%; border-radius: 25px; font-size: 40px; 
+                    height: 10vh; margin:15px; 
+                    margin-top: 80px;
+                }
+                
+                .chtt{
+                    height:10%;
+                }
+
+            
+        }
+        @media screen and (min-width:360px) and (max-width:1024px) {
+
+            .ssd{
+                     width:90%; border-radius: 25px; font-size: 20px; 
+                    height: 30px; margin:15px; 
+                    margin-top: 25px;
+                    margin-bottom: 15px;
+                }
+                        #h55k{
+                text-align: center;
+                padding-top: 6px; 
+                font-size: 8px; color: white;
+                background-color: rgb(82, 173, 82);
+                border-radius: 100%;
+                height: 20px;
+                    width: 20px;
+            }
+            .rightcont{
+                display: none;
+            }
+            hr{
+                margin-left:80px;
+                font-weight: 100;
+            
+                opacity: 0.5;
+            }
+            .leftcont{
+                width:100vw;
+                height: 100vh;
+            }
+            .rcheat{
+            position: sticky;
+            }
+                        .header{
+                position: relative;
+                width:100%;
+                height:70px;
+                background: #ededed;
+                display:flex;
+                justify-content: space-between;
+                align-items: hidden;
+                padding:5px 10px;
+                /* position: fixed; */
+                position: sticky;
+            }
+                        .img{
+                position: relative;
+                width: 50px;
+                height: 50px;
+                overflow: hidden;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            .img1{
+                width: 100%;;
+                height: 100%;
+                object-fit:cover;
+                position: absolute;
+                /* top:30px; */
+                left:0;
+                z-index: 4;
+            }
+            .icons{
+                display: flex;
+                /* justify-content:space-evenly; */
+                align-items: center;
+            }
+                        .icons li{
+                display:flex;
+                list-style: none;
+                cursor: pointer;
+                color:#51585c;
+                font-size: 1.5em;
+                margin-left: 10vw;
+                justify-content: space-evenly;
+            
+            }
+            .search{
+                position: relative;
+
+                width:100%;
+                height:50px;
+                /* background: #f6f6f6; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+            }
+                .search div{
+                    width:100%;
+                    font-size: 25px;
+                    
+                    
+                }
+                .search div ion-icon[name="search" ]{
+                
+                position: absolute;
+                left:80%;
+                top:-10px;
+                }    
+                            .btnn{
+                margin-left: 1vw;
+                opacity: 0.8;
+                margin-bottom: 3px;
+                /* border-bottom: 1px solid rgba(233, 230, 230, 0.911); */
+                
+            }
+            .btnn button{
+                /* height:4vh;
+                width:5vw; */
+                height:50%;
+                margin-right: 10px;
+                font-size: 15px;
+                border: 0px solid black;
+                border-radius: 45%;
+                padding: 5px;
+                margin-bottom: 5px;
+            }
+            .btnn button:hover{
+                background-color: #d9dbd5;
+                padding: 5px;
+            }
+                .rscroll{
+                
+                overflow-y: scroll;
+                /* height:calc(90px); */
+                height: 80vh;
+                
+                
+                /* background-color:  ; */
+                }
+
+
+                        .rchat{
+                margin: 15px;
+                position:relative;
+                height: calc(100%-195px);
+                /* overflow-y: auto; */
+                background-color: #0a4263;
+                display: flex;
+                justify-content: start;
+                /* height:calc(100%-200ox);
+                overflow-y: scroll; */
+            }
+            
+                    .chtt{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            
+            /* border-bottom: 1px solid rgba(233, 230, 230, 0.911); */
+        }
+        .chtt1{
+            border-top: 1px solid rgba(233, 230, 230, 0.911);
+            
+        }
+                    .newtime{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            }
+            #h2k{
+                font-size: 18px; 
+                font-weight: lighter; 
+                margin-right: 150px; 
+                float: right;
+                color: black;
+            }
+            #h5k{
+                font-size: 10px; 
+                font-weight: lighter;
+                float: right;
+            }
+                        .msg{
+                font-size: 14px;
+            }
+
+            
+                      
+                                }
+        @media screen and (min-width:1024px) and (max-width:2150px) {
+.container{
+    display: flex;
+}
+.ssd{
+         width:90%; border-radius: 25px; font-size: 20px; 
+        height: 30px; margin:15px; 
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+            #h55k{
+    text-align: center;
+    padding-top: 6px; 
+    font-size: 8px; color: white;
+    background-color: rgb(82, 173, 82);
+    border-radius: 100%;
+    height: 20px;
+        width: 20px;
+}
+.rightcont{
+    height: 100vh;
+    width:120vw;
+    
+}
+hr{
+    margin-left:80px;
+    font-weight: 100;
+
+    opacity: 0.5;
+}
+.leftcont{
+    
+    width:40vw;
+    
+    height: 100vh;
+    max-width: 400px;
+}
+.rcheat{
+position: sticky;
+}
+            .header{
+    position: relative;
+    width:100%;
+    height:70px;
+    background: #ededed;
+    display:flex;
+    /* justify-content: space-between; */
+    align-items: hidden;
+    /* padding:5px 10px; */
+    /* position: fixed; */
+    position: sticky;
+}
+            .img{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.img1{
+    width: 100%;;
+    height: 100%;
+    object-fit:cover;
+    position: absolute;
+    /* top:30px; */
+    left:0;
+    z-index: 4;
+}
+.icons{
+    display: flex;
+    /* justify-content:space-evenly; */
+    align-items: center;
+}
+            .icons li{
+    display:flex;
+    list-style: none;
+    cursor: pointer;
+    color:#51585c;
+    font-size: 1.5em;
+    margin-left: 1vw;
+    justify-content: space-evenly;
+
+}
+.search{
+    position: relative;
+
+    width:100%;
+    height:50px;
+    /* background: #f6f6f6; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+    .search div{
+        width:100%;
+        font-size: 25px;
+        
+        
+    }
+    .search div ion-icon[name="search" ]{
+    
+    position: absolute;
+    left:80%;
+    top:-10px;
+    }    
+                .btnn{
+    margin-left: 1vw;
+    opacity: 0.8;
+    margin-bottom: 3px;
+    /* border-bottom: 1px solid rgba(233, 230, 230, 0.911); */
+    
+}
+.btnn button{
+    /* height:4vh;
+    width:5vw; */
+    height:50%;
+    margin-right: 10px;
+    font-size: 15px;
+    border: 0px solid black;
+    border-radius: 45%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.btnn button:hover{
+    background-color: #d9dbd5;
+    padding: 5px;
+}
+    .rscroll{
+    
+    overflow-y: scroll;
+    /* height:calc(90px); */
+    height: 80vh;
+    
+    
+    /* background-color:  ; */
+    }
+
+
+            .rchat{
+    margin: 15px;
+    position:relative;
+    height: calc(100%-195px);
+    /* overflow-y: auto; */
+    background-color: #0a4263;
+    display: flex;
+    justify-content: start;
+    /* height:calc(100%-200ox);
+    overflow-y: scroll; */
+}
+
+        .chtt{
+display: flex;
+justify-content: start;
+align-items: center;
+
+/* border-bottom: 1px solid rgba(233, 230, 230, 0.911); */
+}
+.chtt1{
+border-top: 1px solid rgba(233, 230, 230, 0.911);
+
+}
+        .newtime{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+#h2k{
+    font-size: 25px; 
+    font-weight: lighter; 
+    margin-right: 150px; 
+    float: right;
+    color: black;
+}
+#h5k{
+    font-size: 20px; 
+    font-weight: lighter;
+    float: right;
+}
+            .msg{
+    font-size: 20px;
+}
+iframe{
+    
+}
+
+
+          
+                    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="leftcont">
+            <div class="rcheat">
+            <div class="header">
+                <div class="img">
+                    <img src="./sai.png" alt=" user" class="img1" >
+                </div>
+                <ul class="icons">
+                    <li><ion-icon name="people-outline"></ion-icon></li>
+                    <li><ion-icon name="sync-circle-outline"></ion-icon></li>
+                    <li><ion-icon name="chatbubble-ellipses-outline"></ion-icon></li>
+                    <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+                </ul>
+            </div>
+            
+
+            <div class="search">
+                <div>
+                    <input type="text" class="ssd"   name="" id="" placeholder="Search here">
+                    <ion-icon name="search"  style="margin-top: 25px;"></ion-icon>
+                </div>
+                
+            </div>
+            <div class="btnn">
+                <button> All</button>
+                <button> Unread</button>
+                <button>Groups</button>
+            </div>
+            </div>
+        <div class="rscroll">
+            <div class="chtt chtt1">
+            <div class="rchat img">
+                <img src="https://res.cloudinary.com/dj11hcigo/image/upload/v1678010719/samples/food/spices.jpg" alt=" user" class="img1">
+            </div>
+            <a href="./chat.html" target="Satya" style="color:black; text-decoration: none;" >
+            <div>
+                <div class="newtime">
+                    <div>
+                        <h2 id="h2k" >Fevicol&nbsp;$</h2>
+                    </div>
+                    <div >
+                        <h5 id="h5k" >12.00&nbsp;am</h5>
+                        
+                    </div>
+                </div>
+               <div id="hkk">
+                <div class="msg">Hii Satya</div>
+                <div><h5 id="h55k" >3</h5></div>
+                 
+
+               </div>
+                
+            </div>  
+            </a>
+
+        </div>
+        <hr>
+
+
+        <div class="chtt">
+            <div class="rchat img">
+                <img src="./spider-removebg-preview.png" alt=" user" class="img1">
+            </div>
+            <a href="./chat1.html" target="Satya" style="color:black; text-decoration: none;">
+            <div>
+                <div class="newtime">
+                    <div>
+                        <h2 id="h2k">K&NonBreakingSpace;Satya..</h2>
+                    </div>
+                    <div>
+                        <h5 id="h5k">12.00&nbsp;am</h5>
+                    </div>
+                </div>
+               
+                <span class="msg">Okay</span>
+            </div>   
+        </a>
+        </div>
+        <hr>
+        <div class="chtt ">
+            <div class="rchat img">
+                <img src="https://res.cloudinary.com/dj11hcigo/image/upload/v1678011484/Screenshot_20220701-125554_GBWhatsApp_x7ahja.jpg" alt=" user" class="img1">
+            </div>
+            <a href="./chat4.html" target="Satya" style="color:black; text-decoration: none;" >
+            <div>
+                <div class="newtime">
+                    <div>
+                        <h2 id="h2k">Devil!....&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                    </div>
+                    <div>
+                        <h5 id="h5k" >Online</h5>
+                    </div>
+                </div>
+                <div id="hkk">
+                    <div class="msg">Rey Vunnava</div>
+                    <div><h5 id="h55k" >6</h5></div>
+                     
+    
+                   </div>
+            </div>   
+        </a>
+        </div>
+        <hr>
+        <div class="chtt ">
+            <div class="rchat img">
+                <img src="https://res.cloudinary.com/dj11hcigo/image/upload/v1678010731/cld-sample-2.jpg" alt=" user" class="img1">
+            </div>
+            <a href="./chat3.html" target="Satya" style="color:black; text-decoration: none;" >
+
+            <div>
+                <div class="newtime">
+                    <div>
+                        <h2 id="h2k">Rajesh&nbsp;&nbsp;&nbsp;</h2>
+                    </div>
+                    <div>
+                        <h5 id="h5k">09.10&nbsp;am</h5>
+                    </div>
+                </div>
+                <div id="hkk">
+                    <div class="msg">Hello mastaru</div>
+                    <div><h5 id="h55k" >1</h5></div>
+                     
+    
+                   </div>
+            </div>   
+            </a>
+        </div>
+        <hr>
+        <div class="chtt ">
+            <div class="rchat img">
+                <img src="https://res.cloudinary.com/dj11hcigo/image/upload/v1678011519/IMG-20220115-WA0028-01_nukfiq.jpg" alt=" user" class="img1">
+            </div>
+            <a href="./chat5.html" target="Satya" style="color:black; text-decoration: none;" >
+            <div>
+                <div class="newtime">
+                    <div>
+                        <h2 id="h2k">Sai&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                    </div>
+                    <div>
+                        <h5 id="h5k">12.00&nbsp;am</h5>
+                    </div>
+                </div>
+               
+                <span class="msg">Its me Sai</span>
+            </div>   
+            </a>
+        </div>
+        <hr>
+        <div class="chtt ">
+            <div class="rchat img">
+                <img src="https://res.cloudinary.com/dj11hcigo/image/upload/v1720273923/1592917312649_k4rqf9.jpg" alt=" user" class="img1">
+            </div>
+            <a href="./chat6.html" target="Satya" style="color:black; text-decoration: none;" >
+
+            <div>
+                <div class="newtime">
+                    <div>
+                        <h2 id="h2k">Frnd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                    </div>
+                    <div>
+                        <h5 id="h5k">07.29&nbsp;am</h5>
+                    </div>
+                </div>
+               
+                <span class="msg">How are you?</span>
+            </div>  
+            </a> 
+        </div>
+        <hr>
+        <div class="chtt ">
+            <div class="rchat img">
+                <img src="https://res.cloudinary.com/dj11hcigo/image/upload/v1720273923/Screenshot_20220501-130100_Photos_rpv7ce.jpg" alt=" user" class="img1">
+            </div>
+            <a href="./chat7.html" target="Satya" style="color:black; text-decoration: none;" >
+
+            <div>
+                <div class="newtime">
+                    <div>
+                        <h2 id="h2k">Buela&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                    </div>
+                    <div>
+                        <h5 id="h5k">Online</h5>
+                    </div>
+                </div>
+               
+                <span class="msg">Oyy</span>
+            </div>   
+            </a> 
+        </div>
+        <hr>
+        <div class="chtt ">
+            <div class="rchat img">
+                <img src="https://res.cloudinary.com/dj11hcigo/image/upload/v1720273928/20210731_183726_yvjwzx.jpg" alt=" user" class="img1">
+            </div>
+            <a href="./chat8.html" target="Satya" style="color:black; text-decoration: none;" >
+
+            <div>
+                <div class="newtime">
+                    <div>
+                        <h2 id="h2k">Mohan&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                    </div>
+                    <div>
+                        <h5 id="h5k">01.00&nbsp;pm</h5>
+                    </div>
+                </div>
+               
+                <span class="msg">Enjoy!</span>
+            </div>    
+            </a>
+        </div>
+        <hr>
+        <div class="chtt ">
+            <div class="rchat img">
+                <img src="https://res.cloudinary.com/dj11hcigo/image/upload/v1720273923/59984219_424361851453391_2022446876451667968_o_o8f17e.jpg" alt=" user" class="img1">
+            </div>
+            <div>
+                <div class="newtime">
+                    <div>
+                        <h2 id="h2k">Nandhu&nbsp;&nbsp;</h2>
+                    </div>
+                    <div>
+                        <h5 id="h5k">03.01&nbsp;pm</h5>
+                    </div>
+                </div>
+               
+                <span class="msg">Let's Meet</span>
+            </div>    
+        </div>
+        <hr>
+        <div class="chtt ">
+            <div class="rchat img">
+                <img src="https://res.cloudinary.com/dj11hcigo/image/upload/v1720273923/I_LOVE_MY_INDIA_20170401_210932_kb7gdw.jpg" alt=" user" class="img1">
+            </div>
+            <div>
+                <div class="newtime">
+                    <div>
+                        <h2 id="h2k">E&nbsp;Mani&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                    </div>
+                    <div>
+                        <h5 id="h5k">12.30&nbsp;am</h5>
+                    </div>
+                </div>
+               
+                <span class="msg">How r u?</span>
+            </div>   
+        </div>
+        <hr>
+        <div class="chtt ">
+            <div class="rchat img">
+                <img src="https://res.cloudinary.com/dj11hcigo/image/upload/v1720273946/IMG_20230828_183543_dbjkd9.jpg" alt=" user" class="img1">
+            </div>
+            <div>
+                <div class="newtime">
+                    <div>
+                        <h2 id="h2k">Mahesh&nbsp;&nbsp;</h2>
+                    </div>
+                    <div>
+                        <h5 id="h5k">12.00&nbsp;am</h5>
+                    </div>
+                </div>
+               
+                <span class="msg">Its me Mani</span>
+            </div>   
+        </div>
+        <hr>
+        <div class="chtt ">
+            <div class="rchat img">
+                <img src="https://res.cloudinary.com/dj11hcigo/image/upload/v1678011518/20211205_015755-01_ms4plu.jpg" alt=" user" class="img1">
+            </div>
+            <div>
+                <div class="newtime">
+                    <div>
+                        <h2 id="h2k">Satya&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                    </div>
+                    <div>
+                        <h5 id="h5k">12.50&nbsp;am</h5>
+                    </div>
+                </div>
+               
+                <span class="msg">Its me Satya</span>
+            </div>    
+        </div>
+        <hr>
+        <div class="chtt ">
+            <div class="rchat img">
+                <img src="https://res.cloudinary.com/dj11hcigo/image/upload/v1678011519/IMG-20200928-WA0044_rmtvgf.jpg" alt=" user" class="img1">
+            </div>
+            <div>
+                <div class="newtime">
+                    <div>
+                        <h2 id="h2k">Naveen&nbsp;&nbsp;</h2>
+                    </div>
+                    <div>
+                        <h5 id="h5k">11.20&nbsp;am</h5>
+                    </div>
+                </div>
+               
+                <span class="msg">whats up!</span>
+            </div>   
+        </div>
+        <hr>
+        <div class="chtt ">
+            <div class="rchat img">
+                <img src="https://res.cloudinary.com/dj11hcigo/image/upload/v1678010732/cld-sample-5.jpg" alt=" user" class="img1">
+            </div>
+            <div>
+                <div class="newtime">
+                    <div>
+                        <h2 id="h2k">Manasa&nbsp;&nbsp;</h2>
+                    </div>
+                    <div>
+                        <h5 id="h5k">10.20&nbsp;am</h5>
+                    </div>
+                </div>
+               
+                <span class="msg">Its me Manasa</span>
+            </div>   
+        </div>
+        <hr>
+        <div class="chtt ">
+            <div class="rchat img">
+                <img src="https://res.cloudinary.com/dj11hcigo/image/upload/v1678010731/cld-sample-3.jpg" alt=" user" class="img1">
+            </div>
+            <div>
+                <div class="newtime">
+                    <div>
+                        <h2 id="h2k">Mounika&nbsp;</h2>
+                    </div>
+                    <div>
+                        <h5 id="h5k">12.10&nbsp;am</h5>
+                    </div>
+                </div>
+               
+                <span class="msg">Hare Ram!</span>
+            </div>  
+        </div>
+        <hr>
+        <div class="chtt ">
+            <div class="rchat img">
+                <img src="https://res.cloudinary.com/dj11hcigo/image/upload/v1678010732/cld-sample-4.jpg" alt=" user" class="img1">
+            </div>
+            <div>
+                <div class="newtime">
+                    <div>
+                        <h2 id="h2k">Deepthi&nbsp;&nbsp;</h2>
+                    </div>
+                    <div>
+                        <h5 id="h5k">12.08&nbsp;am</h5>
+                    </div>
+                </div>
+               
+                <span class="msg">How Can i Forget.</span>
+            </div>  
+        </div>
+        <hr>
+        <div class="chtt ">
+            <div class="rchat img">
+                <img src="https://res.cloudinary.com/dj11hcigo/image/upload/v1678010730/cld-sample.jpg" alt=" user" class="img1">
+            </div>
+            <div>
+                <div class="newtime">
+                    <div>
+                        <h2 id="h2k">Prasad&nbsp;&nbsp;&nbsp;</h2>
+                    </div>
+                    <div>
+                        <h5 id="h5k">07.47&nbsp;am</h5>
+                    </div>
+                </div>
+               
+                <div id="hkk">
+                    <div class="msg">Hii Satya</div>
+                    <div><h5 id="h55k" >3</h5></div>
+                     
+    
+                   </div>
+            </div>    
+        </div>
+        <hr>
+        <div class="chtt ">
+            <div class="rchat img">
+                <img src="https://res.cloudinary.com/dj11hcigo/image/upload/v1678010721/samples/animals/kitten-playing.gif" alt=" user" class="img1">
+            </div>
+            <div>
+                <div class="newtime">
+                    <div>
+                        <h2 id="h2k">Kranthi&nbsp;&nbsp;&nbsp;</h2>
+                    </div>
+                    <div>
+                        <h5 id="h5k">12.01&nbsp;am</h5>
+                    </div>
+                </div>
+               
+                <span class="msg">Its me Satya</span>
+            </div>
+        </div>
+        <hr>
+
+    </div>
+            
+        </div>
+        
+        <iframe  name="Satya" frameborder="0" scrolling="no" class="rightcont iframe1" style="  margin-top: 0%;" src="chat.html"></iframe>
+
+
+
+
+           </div>
+         
+            
+            
+
+
+        </div>  
+        
+        
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    </div>
+   
+</body>
+</html>
